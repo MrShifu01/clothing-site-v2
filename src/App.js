@@ -4,6 +4,7 @@ import Landing from './components/Landing';
 import Footer from './components/Footer';
 import Product from './components/Product';
 import User from './components/User';
+import Legal from './components/Legal';
 import { Routes, Route } from 'react-router-dom'
 import products from './components/assets/products';
 
@@ -29,6 +30,7 @@ function App() {
         } 
         />
         <Route path="/user" element={<User loginState={true} />} />
+        <Route path="/legal" element={<Legal />} />
       </Routes>
       <Footer />
     </div>
