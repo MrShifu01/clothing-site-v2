@@ -1,5 +1,6 @@
 import '../index.css'
 
+// just a basic component to handle the information about the legal stuff
 export default function Legal () {
     return (
         <div className='legal-container'>

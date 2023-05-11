@@ -1,6 +1,8 @@
+// Using Link for the navigation menu
 import '../index.css'
 import { Link } from 'react-router-dom'
 
+// Building out the navigation bar with a logo and a user icon
 export default function Nav () {
     return (
         <>

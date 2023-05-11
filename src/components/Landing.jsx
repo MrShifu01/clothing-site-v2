@@ -1,14 +1,20 @@
 // Importing some images and some CSS
+// Importing css and useState
 import "../index.css"
 import {  useState } from 'react'
 
+// Creating the landing page with the option to login, or if logged in, then display the about/landing page
 export default function Landing () {
+    
+    // bringing in the useState hook
     const [loginState, setLoginState] = useState("")
     
+    // Function to handle the click of the sign in button
     const handleClick = () => {
         setLoginState(true)
     }
 
+    // If logged in, show the about info
     if (loginState) {
         return (
             <div className="about">
@@ -33,6 +39,7 @@ export default function Landing () {
                 </div>
             </div>
         )
+        // Login if not logged in
     } else {
         return (
                 <div class="header-container">

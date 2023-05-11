@@ -1,5 +1,7 @@
+// Using the Card element from bootstrap
 import { Card } from 'react-bootstrap'
 import '../index.css'
+
 
 // Function for the Product component that needs to be standar for all the products
 function Product ({ product }) {

@@ -11,13 +11,17 @@ import products from './components/assets/products';
 function App() {
   return (
     <div className="App">
+      {/* Always display header and Nav */}
       <header className="App-header">
         <Header/>
       </header>
+      {/* Brining in Routes to show componenet sif on a certain route */}
       <Routes>
+        {/* Using a state set to false for logged in on the home page */}
         <Route exact path="/" element={<Landing isLoggedIn={false} />} />
         <Route path="/shop" element={
           <>
+          {/* Looping through the products schema to display producs */}
             <h1 class="products-heading">Latest Products</h1>
             <div class="products-container">
               {products.map((product) => (
@@ -29,7 +33,7 @@ function App() {
           </>
         } 
         />
-        <Route path="/user" element={<User loginState={true} />} />
+        <Route path="/user" element={<User />} />
         <Route path="/legal" element={<Legal />} />
       </Routes>
       <Footer />

@@ -1,7 +1,8 @@
 import '../index.css'
 
+// Creating a user componenet that lets auser log out and an alert pops up
 export default function User () {
-   
+//    handling the click
     const handleClick = () => {
         alert("User has logged out!")
     }
