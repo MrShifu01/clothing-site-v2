@@ -1,11 +1,18 @@
 // Importing some images and some CSS
 import "../index.css"
+import {  useState } from 'react'
 
 export default function Landing () {
-    return (
-        <div className="about">
-            {/* About section giving info of the company with soem images */}
-            <h1 className="about-heading">Paradise Found: Sustainable Style with a Tropical Twist</h1>
+    const [loginState, setLoginState] = useState("")
+    
+    const handleClick = () => {
+        setLoginState(true)
+    }
+
+    if (loginState) {
+        return (
+            <div className="about">
+                <h1 className="about-heading">Paradise Found: Sustainable Style with a Tropical Twist</h1>
                 <div class="about-container-one">
                     <p class="about-paragraph">Welcome to Coconut Clothing, where the tropics meet timeless style! Born out of a passion for eco-conscious fashion and the laid-back vibes of island living, Coconut Clothing is a refreshing breeze in the world of apparel.</p>
                     <div class="about-image-container">
@@ -24,6 +31,17 @@ export default function Landing () {
                         <img class="about-image" src="/assets/about-image3.jpg" alt="women witting on the beach"/>
                     </div>
                 </div>
-        </div>
-    )
+            </div>
+        )
+    } else {
+        return (
+                <div class="header-container">
+                    <h1 class="logged-out-heading">Welcome to Coconut Clothing!</h1> 
+                    <h3 class="logged-out-subheading">Please Sign In</h3>
+                        <div class="button-container">
+                            <button onClick={handleClick} class="sign-in-button">Sign In</button>
+                        </div>
+                </div>
+        )
+    }
 }

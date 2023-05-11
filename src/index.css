@@ -88,8 +88,13 @@ body {
 .about-container-two,
 .about-container-three {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
     margin-top: 50px;
+}
+
+.about-container-two .about-paragraph {
+  order: -1;
 }
 
 .about-paragraph {
@@ -163,6 +168,33 @@ body {
   color: white;
   font-family: "Roboto", sans-serif;
   font-size: larger;
+}
+
+/* ************************ */
+/* Sign In Styling */
+/* ************************ */
+
+.header-container {
+  text-align: center;
+}
+
+.sign-in-button {
+  font-family: inherit;
+  font-size: x-large;
+  padding: 3px 30px;
+  background-color: var(--clr-4);
+  border-color: var(--clr-1);
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+/* ************************ */
+/* Sign Out Styling */
+/* ************************ */
+
+.sign-out-container {
+  text-align: center;
+  margin-top: 3rem;
 }
 
 /* ************************ */

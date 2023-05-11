@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Landing from './components/Landing';
 import Footer from './components/Footer';
 import Product from './components/Product';
+import User from './components/User';
 import { Routes, Route } from 'react-router-dom'
 import products from './components/assets/products';
 
@@ -10,10 +11,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Header />
+        <Header/>
       </header>
       <Routes>
-        <Route exact path="/" element={<Landing />} />
+        <Route exact path="/" element={<Landing isLoggedIn={false} />} />
         <Route path="/shop" element={
           <>
             <h1 class="products-heading">Latest Products</h1>
@@ -27,6 +28,7 @@ function App() {
           </>
         } 
         />
+        <Route path="/user" element={<User loginState={true} />} />
       </Routes>
       <Footer />
     </div>
