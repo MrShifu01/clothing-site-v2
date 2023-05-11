@@ -1,13 +1,176 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ************************ */
+/* Setting some global styling */
+/* ************************ */
+
+/* Importing a font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rokkitt&display=swap');
+
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --clr-1: rgb(29, 63, 82);
+  --clr-2: rgb(8, 5, 0);
+  --clr-3: rgb(255, 200, 89);
+  --clr-4: rgb(242, 148, 41);
+  --clr-5: rgb(163, 39, 47);
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  background:linear-gradient(
+    to right,
+    rgba(255, 200, 89, 0.3),
+    rgba(242, 148, 41, 0.3)
+    );
+}
+
+/* ************************ */
+/* Navigation Styling */
+/* ************************ */
+
+.nav-container {
+  width: 100%;
+  background-color: var(--clr-1);
+}
+
+.navbar {
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 8rem;
+  padding-top: 5px;
+  color: var(--clr-3);
+}
+
+.nav-list {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--clr-3);
+}
+
+.user-icon {
+  padding-top: 5px;
+  width: 30px;
+}
+
+/* ************************ */
+/* Landing Page Styling */
+/* ************************ */
+
+.about {
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-heading {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.about-container-one,
+.about-container-two,
+.about-container-three {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.about-paragraph {
+  width: 50%;
+  font-family: "Rokkitt", sans-serif;
+  font-size: x-large;
+  padding: 10px;
+}
+
+.about-image {
+  aspect-ratio: 1/0.6;
+  width: 400px;
+  border-radius: 50px;
+  box-shadow: 0 0 .5rem;
+  margin: 10px;
+}
+
+/* ************************ */
+/* Products Styling */
+/* ************************ */
+
+/* Styling the products heading */
+.products-heading {
+  text-align: center;
+  padding: 40px 0;
+
+}
+
+/* Styling the products container */
+.products-container {
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 1rem;
+  margin: 0 1rem 2rem 1rem;
+  background-color: var(--clr-1);
+  border-radius: 10px;
+  max-width: 18rem;
+}
+
+.product-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.card-title {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: x-large;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+.card-price {
+  text-align: center;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: larger;
+}
+
+/* ************************ */
+/* Footer Styling */
+/* ************************ */
+
+.footer {
+  margin-top: 3rem;
+  text-align: center;
+}
+
