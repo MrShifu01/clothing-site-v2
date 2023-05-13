@@ -1,9 +1,19 @@
 // Using Link for the navigation menu
 import '../index.css'
 import { Link } from 'react-router-dom'
+import HamburgerNav from './Hamburger'
+import { useState } from 'react'
 
 // Building out the navigation bar with a logo and a user icon
 export default function Nav () {
+    // useState to toggle burger menu on and off
+    const [hamburgerOpen, setHamburgeropen] = useState(false)
+
+    // Toggle Function
+    const toggleHamburger = () => {
+        setHamburgeropen(!hamburgerOpen)
+    }
+
     return (
         <>
             <div className="nav-container">
@@ -16,8 +26,10 @@ export default function Nav () {
                         alt="logo"
                         />
                     </a>
-                    <ul className='nav-list'>
-                        <li className="list-item">
+                    {/* Changing the nav list accordingly */}
+                    <ul className={`nav-list ${hamburgerOpen ? "open" : ""}`}>
+                        <li 
+                        className="list-item">
                             <Link 
                             className='nav-link' 
                             to="/">Home</Link>
@@ -49,7 +61,12 @@ export default function Nav () {
                             </Link>
                         </li>
                     </ul>
+                    {/* Bringing in the burger toggle */}
+                    <div className='burger-click' onClick={toggleHamburger}>
+                        <HamburgerNav />
+                    </div>
                 </nav>
+
             </div>
         </>
     )
