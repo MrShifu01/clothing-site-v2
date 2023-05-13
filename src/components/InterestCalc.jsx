@@ -1,5 +1,5 @@
 import '../index.css'
-import { useState } from 'react'
+import { useState } from 'react';
 
 // component to show the interest calculated for owed amounts
 export default function InterestCalc () {

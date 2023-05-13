@@ -5,11 +5,11 @@ import Footer from './components/Footer';
 import Product from './components/Product';
 import User from './components/User';
 import Legal from './components/Legal';
-import { Routes, Route } from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom';
 import products from './components/assets/products';
 import InterestCalc from './components/InterestCalc';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       {/* Always display header and Nav */}
@@ -22,17 +22,17 @@ function App() {
         <Route exact path="/" element={<Landing isLoggedIn={false} />} />
         <Route path="/shop" element={
           <>
-          {/* Looping through the products schema to display producs */}
+            {/* Looping through the products schema to display producs */}
             <h1 className="products-heading">Latest Products</h1>
             <div className="products-container">
               {products.map((product) => (
-                <div sm={12} md={6} lg={4} xl={3}>
+                <div key={product.id} sm={12} md={6} lg={4} xl={3}>
                   <Product product={product} />
                 </div>
               ))}
             </div>
           </>
-        } 
+        }
         />
         <Route path="/user" element={<User />} />
         <Route path="/legal" element={<Legal />} />
@@ -42,5 +42,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
