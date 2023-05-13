@@ -23,8 +23,8 @@ function App() {
         <Route path="/shop" element={
           <>
           {/* Looping through the products schema to display producs */}
-            <h1 class="products-heading">Latest Products</h1>
-            <div class="products-container">
+            <h1 className="products-heading">Latest Products</h1>
+            <div className="products-container">
               {products.map((product) => (
                 <div sm={12} md={6} lg={4} xl={3}>
                   <Product product={product} />

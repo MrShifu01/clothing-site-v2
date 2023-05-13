@@ -69,8 +69,8 @@ export default function InterestCalc () {
                     placeholder='Months to pay back' />
                 </div>
             </form>
-            <div class="sign-out-container">
-                <button onClick={handleClick} class="interest-button">Calculate Interest</button>
+            <div className="sign-out-container">
+                <button onClick={handleClick} className="interest-button">Calculate Interest</button>
             </div>
         </div>
     )

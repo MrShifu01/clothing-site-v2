@@ -8,8 +8,8 @@ export default function User () {
     }
     
     return (
-        <div class="sign-out-container">
-            <button onClick={handleClick} class="sign-in-button">Sign Out</button>
+        <div className="sign-out-container">
+            <button onClick={handleClick} className="sign-in-button">Sign Out</button>
         </div>
     )
 }
